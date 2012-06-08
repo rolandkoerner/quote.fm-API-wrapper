@@ -7,6 +7,13 @@ import de.rolandkoerner.quotefmapi.dao.PageDAO;
 import de.rolandkoerner.quotefmapi.dao.RecommendationDAO;
 import de.rolandkoerner.quotefmapi.dao.UserDAO;
 
+/***
+ * 
+ * This is a wrapper for the quote.fm API. 
+ * 
+ * @author Roland Körner
+ *
+ */
 public class APIWrapper {
 
 	private static APIWrapper instance;
@@ -42,18 +49,18 @@ public class APIWrapper {
 		return instance;
 	}
 
-	public ArticleDAO articles() {
+	public ArticleDAO getArticleDAO() {
 		return articleDAO;
 	}
 
-	public RecommendationDAO recommendations() {
+	public RecommendationDAO getRecommendationDAO() {
 		return recommendationDAO;
 	}
-	public UserDAO users() {
+	public UserDAO getUserDAO() {
 		return userDAO;
 	}
 	
-	public PageDAO pages(){
+	public PageDAO getPageDAO(){
 		return pageDAO;
 	}
 	
