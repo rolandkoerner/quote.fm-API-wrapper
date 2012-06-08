@@ -11,7 +11,7 @@ The wrapper depends on [Apache HttpClient][2] and the [json.org JSON library][3]
 Usage
 -----
 
-The classes in `de.rolandkoerner.quotefmapi.entities` are the cornerstone of the wrapper. Just use their static methods to recieve the data accordingly. 
+You can use the classes in `de.rolandkoerner.quotefmapi.entities`, called entities. Just use their static methods to recieve the data accordingly. 
 
 For recieving a list of the newest articles in english posted on quote.fm, call `Article.list("en","time")`. 
 
@@ -25,6 +25,10 @@ Using another HTTP client
 
 If you, for whatever reason, don't want to use the Apache HttpClient, you can implement the `IWebClient` class and call `APIWrapper.init` with your implementation before making API requests. `init` has to be called only once.
 
+TODO
+----
+
+- add comments :)
 
 [1]: http://quote.fm/labs/documentation/index
 [2]: http://hc.apache.org/httpcomponents-client-ga/
