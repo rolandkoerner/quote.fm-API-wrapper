@@ -64,11 +64,11 @@ public class APIWrapper {
 		return pageDAO;
 	}
 	
-	public CommentDAO comments(){
+	public CommentDAO getCommentDAO(){
 		return commentDAO;
 	}
 	
-	public CategoryDAO categories(){
+	public CategoryDAO getCategoryDAO(){
 		return categoryDAO;
 	}
 }

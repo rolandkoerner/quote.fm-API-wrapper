@@ -184,7 +184,7 @@ public class RecommendationDAO extends DAO<Recommendation> {
 
 			try {
 				JSONArray commentsArray = jsonObject.getJSONArray("comments");
-				List<Comment> comments = APIWrapper.getInstance().comments()
+				List<Comment> comments = APIWrapper.getInstance().getCommentDAO()
 						.parseList(commentsArray);
 				recommendation.setComments(comments);
 			} catch (JSONException e) {

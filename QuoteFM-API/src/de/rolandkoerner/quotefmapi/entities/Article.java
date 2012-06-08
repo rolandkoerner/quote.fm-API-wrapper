@@ -25,7 +25,7 @@ public class Article extends AbstractEntity {
 	}
 	
 	public static List<Article> list(String language, String scope) {
-		String categoryIds = APIWrapper.getInstance().categories()
+		String categoryIds = APIWrapper.getInstance().getCategoryDAO()
 				.getCommaSeparatedIds();
 		return APIWrapper.getInstance().getArticleDAO()
 				.listByCategoryIds(categoryIds, language, scope);
