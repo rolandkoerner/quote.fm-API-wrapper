@@ -19,7 +19,7 @@ public class TestArticleDAO {
 
 	@Before
 	public void before() {
-		articleDAO = APIWrapper.getInstance().articles();
+		articleDAO = APIWrapper.getInstance().getArticleDAO();
 	}
 
 	@Test

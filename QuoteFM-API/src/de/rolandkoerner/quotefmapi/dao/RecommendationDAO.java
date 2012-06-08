@@ -159,7 +159,7 @@ public class RecommendationDAO extends DAO<Recommendation> {
 
 			try {
 				JSONObject articleObject = jsonObject.getJSONObject("article");
-				Article article = APIWrapper.getInstance().articles()
+				Article article = APIWrapper.getInstance().getArticleDAO()
 						.parse(articleObject);
 				recommendation.setArticle(article);
 			} catch (JSONException e) {
@@ -168,7 +168,7 @@ public class RecommendationDAO extends DAO<Recommendation> {
 
 			try {
 				JSONObject userObject = jsonObject.getJSONObject("user");
-				User user = APIWrapper.getInstance().users().parse(userObject);
+				User user = APIWrapper.getInstance().getUserDAO().parse(userObject);
 				recommendation.setUser(user);
 			} catch (JSONException e) {
 				recommendation.setUser(null);
@@ -176,7 +176,7 @@ public class RecommendationDAO extends DAO<Recommendation> {
 
 			try {
 				JSONObject pageObject = jsonObject.getJSONObject("domain");
-				Page page = APIWrapper.getInstance().pages().parse(pageObject);
+				Page page = APIWrapper.getInstance().getPageDAO().parse(pageObject);
 				recommendation.setPage(page);
 			} catch (JSONException e) {
 				recommendation.setPage(null);

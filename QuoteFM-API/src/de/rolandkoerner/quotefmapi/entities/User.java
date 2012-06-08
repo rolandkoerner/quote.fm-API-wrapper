@@ -25,15 +25,15 @@ public class User extends AbstractEntity {
 	private Date created;
 
 	public static User get(int id) {
-		return APIWrapper.getInstance().users().getById(id);
+		return APIWrapper.getInstance().getUserDAO().getById(id);
 	}
 
 	public static User get(String userName) {
-		return APIWrapper.getInstance().users().getByUserName(userName);
+		return APIWrapper.getInstance().getUserDAO().getByUserName(userName);
 	}
 
 	public List<Recommendation> getRecommendations() {
-		return APIWrapper.getInstance().recommendations().listByUserName(getUserName());
+		return APIWrapper.getInstance().getRecommendationDAO().listByUserName(getUserName());
 	}
 
 	public String getFullName() {

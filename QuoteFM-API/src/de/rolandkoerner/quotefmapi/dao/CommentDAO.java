@@ -53,7 +53,7 @@ public class CommentDAO extends DAO<Comment> {
 
 			try {
 				JSONObject userObject = jsonObject.getJSONObject("user");
-				User user = APIWrapper.getInstance().users().parse(userObject);
+				User user = APIWrapper.getInstance().getUserDAO().parse(userObject);
 				comment.setUser(user);
 			} catch (JSONException e) {
 				comment.setUser(null);

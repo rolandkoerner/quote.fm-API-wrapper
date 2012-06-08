@@ -15,7 +15,12 @@ The entity classes are the cornerstone of the wrapper. Just use their static met
 
 ### Example 
 
-For recieving a list of the newest articles in english posted on quote.fm, call `Article.list("en","newest")`. 
+For recieving a list of the newest articles in english posted on quote.fm, call `Article.list("en","time")`. 
+
+Using another http client
+-------------------------
+
+If you, for whatever reason, don't want to use the Apache HttpClient, you can implement the `IWebClient` class and call `APIWrapper.init` with your implementation before making API requests. `init` has to be called only once.
 	
 
 [1]: http://quote.fm/labs/documentation/index

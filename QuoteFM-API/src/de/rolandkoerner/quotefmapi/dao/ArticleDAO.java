@@ -140,7 +140,7 @@ public class ArticleDAO extends DAO<Article> {
 				JSONObject recommendationObject = jsonObject
 						.getJSONObject("topquote");
 				Recommendation recommendation = APIWrapper.getInstance()
-						.recommendations().parse(recommendationObject);
+						.getRecommendationDAO().parse(recommendationObject);
 				article.setTopRecommendation(recommendation);
 			} catch (JSONException e) {
 				article.setTopRecommendation(null);

@@ -81,7 +81,7 @@ public class CategoryDAO extends DAO<Category> {
 
 		try {
 			JSONObject curatorJSONObject = jsonObject.getJSONObject("curator");
-			User curator = APIWrapper.getInstance().users()
+			User curator = APIWrapper.getInstance().getUserDAO()
 					.parse(curatorJSONObject);
 			category.setCurator(curator);
 		} catch (JSONException e) {

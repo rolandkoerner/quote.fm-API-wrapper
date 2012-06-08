@@ -28,24 +28,24 @@ public class Recommendation extends AbstractEntity {
 	private List<Comment> comments;
 	
 	public static Recommendation get(int id){
-		return APIWrapper.getInstance().recommendations().getById(id);
+		return APIWrapper.getInstance().getRecommendationDAO().getById(id);
 	}
 
 	public Article getArticle() {
 		if (article == null && articleId > 0)
-			setArticle(APIWrapper.getInstance().articles().getById(articleId));
+			setArticle(APIWrapper.getInstance().getArticleDAO().getById(articleId));
 		return article;
 	}
 
 	public User getUser() {
 		if (user == null && userId > 0)
-			setUser(APIWrapper.getInstance().users().getById(userId));
+			setUser(APIWrapper.getInstance().getUserDAO().getById(userId));
 		return user;
 	}
 
 	public Page getPage() {
 		if (page == null && pageId > 0)
-			setPage(APIWrapper.getInstance().pages().getById(pageId));
+			setPage(APIWrapper.getInstance().getPageDAO().getById(pageId));
 		return page;
 	}
 

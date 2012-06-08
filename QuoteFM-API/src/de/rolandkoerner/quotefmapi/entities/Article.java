@@ -21,18 +21,18 @@ public class Article extends AbstractEntity {
 	private Recommendation topRecommendation;
 
 	public static Article get(int id) {
-		return APIWrapper.getInstance().articles().getById(id);
+		return APIWrapper.getInstance().getArticleDAO().getById(id);
 	}
 	
 	public static List<Article> list(String language, String scope) {
 		String categoryIds = APIWrapper.getInstance().categories()
 				.getCommaSeparatedIds();
-		return APIWrapper.getInstance().articles()
+		return APIWrapper.getInstance().getArticleDAO()
 				.listByCategoryIds(categoryIds, language, scope);
 	}
 
 	public List<Recommendation> getRecommendations() {
-		return APIWrapper.getInstance().recommendations()
+		return APIWrapper.getInstance().getRecommendationDAO()
 				.listByArticleId(this.getId());
 	}
 

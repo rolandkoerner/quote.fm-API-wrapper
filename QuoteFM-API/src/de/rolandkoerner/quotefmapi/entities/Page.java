@@ -19,11 +19,11 @@ public class Page extends AbstractEntity {
 	private Date created;
 
 	public static Page get(int id) {
-		return APIWrapper.getInstance().pages().getById(id);
+		return APIWrapper.getInstance().getPageDAO().getById(id);
 	}
 
 	public List<Article> getArticles() {
-		return APIWrapper.getInstance().articles().listByPageId(this.getId());
+		return APIWrapper.getInstance().getArticleDAO().listByPageId(this.getId());
 	}
 
 	public String getName() {

@@ -32,10 +32,10 @@ public class TestRecommendationDAO {
 
 	@Test
 	public void test() {
-			Recommendation actual = APIWrapper.getInstance().recommendations().getById(600);
+			Recommendation actual = APIWrapper.getInstance().getRecommendationDAO().getById(600);
 
 			
-			APIWrapper.getInstance().recommendations().getById(600);
+			APIWrapper.getInstance().getRecommendationDAO().getById(600);
 
 	}
 

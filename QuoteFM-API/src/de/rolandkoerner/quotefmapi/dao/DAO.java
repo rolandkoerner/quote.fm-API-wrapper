@@ -9,7 +9,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import de.rolandkoerner.quotefmapi.IWebClient;
-import de.rolandkoerner.quotefmapi.entities.AbstractEntity;
 import de.rolandkoerner.quotefmapi.exceptions.DAOException;
 
 public abstract class DAO<Entity> {
